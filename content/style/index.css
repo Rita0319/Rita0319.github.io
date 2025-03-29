@@ -19,7 +19,7 @@
     margin-bottom:20px;
 }
 .background-color{
-    background-color:var(--main-color)
+    background-color:var(--main-color);
 }
 .card{
     background-color:var(--main-card-color);
@@ -30,7 +30,14 @@
     border-radius: 10%;
 
 }
-
+.card:hover{
+    cursor:pointer;
+    background-color:#efb8a8;
+}
+.active-card{
+    background-color:#f2ae9b;
+    color:white !important;
+}
 .card-desc{
     color:var(--main-font-color);
     font-size:28px;
@@ -58,4 +65,16 @@
     font-weight:bold;
     color:var(--main-font-color);
 
+}
+.button:hover{
+    cursor:pointer;
+    background-color:#efb8a8;
+}
+
+.active-button{
+    background-color: #f2ae9b;
+    color:white !important;
+}
+.expression-img{
+    width: 100%;
 }

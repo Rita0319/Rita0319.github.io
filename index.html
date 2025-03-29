@@ -10,57 +10,97 @@
 
 <body class="background-color">
 
-    <div style="display:flex;justify-content:center;margin-bottom: 10px;">
+    <div style="display:flex;justify-content:center;margin-bottom: 30px;">
         <span class="title">選取動物</span>
     </div>
 
 
     <div style="display: flex;justify-content:center;gap: 10px;" >
-     <div class="card">
+      <div id="rabbit" class="card" onclick="clickCard(this)">
         <img src="./images/rabbit.jpg"class="img"/>
         <span class="card-desc">兔星人</span>
      </div>
 
-     <div class="card">
+     <div id="cat" class="card" onclick="clickCard(this)">
         <img src="./images/cat.jpg"class="img"/>
         <span class="card-desc">貓星人</span>
      </div>
 
-     <div class="card">
+     <div id="dog" class="card" onclick="clickCard(this)">
         <img src="./images/dog.jpg"class="img"/>
         <span class="card-desc">汪星人</span>
      </div>
 
-     <div class="card">
+     <div id="mouse" class="card" onclick="clickCard(this)">
         <img src="./images/mouse.jpg"class="img"/>
         <span class="card-desc">鼠星人</span>
      </div>
 
-     <div class="card">
+     <div id="bird" class="card" onclick="clickCard(this)">
         <img src="./images/bird.jpg"class="img"/>
         <span class="card-desc">啾星人</span>
      </div>
     </div>
 
 
-    <div style="display:flex;justify-content:center;margin:10px 0px;">
+    <div style="display:flex;justify-content:center;margin: 30px 0px 10px 0px;">
         <span class="title">選取情緒</span>
     </div>
 
     <div class="container">
       <div class="buttons">
-         <div class="button">正常</div>
-         <div class="button">喜</div>
-         <div class="button">怒</div>
-         <div class="button">哀</div>
-         <div class="button">懼</div>
-         <div class="button">其他</div>
+         <div id="normal" class="button"onclick="clickButton(this)">正常</div>
+         <div id="happy" class="button"onclick="clickButton(this)">喜</div>
+         <div id="angry" class="button"onclick="clickButton(this)">怒</div>
+         <div id="sad" class="button"onclick="clickButton(this)">哀</div>
+         <div id="scared" class="button"onclick="clickButton(this)">懼</div>
+         <div id="other" class="button"onclick="clickButton(this)">其他</div>
       </div>
     </div>
-
+    
+<div style="display:flex;margin:0px 100px;">
+   <img id="expression"class="expression-img"src=""/>
+</div>
 </body>
+
 </html>
 
+<script>
+const state={
+   animal:"",
+   emotion:"",
+}
+
+function clickCard(card){
+  document.querySelectorAll(".card").forEach((c)=>{
+   c.classList.remove("active-card");
+  });
+  card.classList.add("active-card");
+  state.animal=card.id;
+  showExpression();
+}
+
+function clickButton(button){
+  document.querySelectorAll(".button").forEach((b)=>{
+   b.classList.remove("active-button");
+  });
+  button.classList.add("active-button");
+
+  state.emotion=button.id;
+  showExpression();
+}
+
+function showExpression(){
+   console.log(state);
+   const{animal,emotion}=state;
+   const img = document.getElementById('expression');
+   if(animal =='rabbit'&& emotion =='angry'){
+
+      img.src = './images/rabbit_angry.jpg';
+
+   }
+}
+</script>
 
 
 
