@@ -10,10 +10,16 @@
 
 <body class="background-color">
 
+   <div class="title-bar">
+      <div class="left">
+          <img src="./images/icon.png" class="icon">
+          <span class="head">寵物情緒圖鑑</span>
+      </div>
+  </div>
+
     <div style="display:flex;justify-content:center;margin: 10px 30px 0px 0px;">
         <span class="title">選取動物</span>
     </div>
-
 
     <div style="display: flex;justify-content:center;gap: 10px;" >
       <div id="rabbit" class="card" onclick="clickCard(this)">
@@ -95,10 +101,9 @@ function showExpression(){
    const{animal,emotion}=state;
    const img = document.getElementById('expression');
    if(animal =='rabbit'&& emotion =='angry'){
-
-      img.src = './images/rabbit_angry.jpg';
-
-   }
+      img.src = './images/rabbit_angry.jpg';}
+      else if(animal =='rabbit'&& emotion =='angry'){
+         img.src = './images/rabbit_angry.jpg';}
 }
 </script>
 
