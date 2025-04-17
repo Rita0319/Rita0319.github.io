@@ -4,16 +4,14 @@
    --main-card-color:#efc48f;
    --card-color:#fbfaf8;
    --head-color:#f2ae9b;
-
-
-
+   font-size: 16px;
 }
 
 
 .head{
     color:var(--card-color);
     font-weight:bolder;
-    font-size:32px;
+    font-size:1.8rem;
 }
 
 .title-bar {
@@ -91,18 +89,19 @@
     justify-content:center;
     gap:15px;
     margin-top: 5px;
-
+    flex-wrap: wrap;
 }
 
 .button{
     background-color:var(--card-color);
     border-radius: 20%;
     padding:25px 30px;
-    font-size:35px;
+    font-size: 2rem;
     font-weight:bold;
     color:var(--main-font-color);
-
+    user-select: none;
 }
+
 .button:hover{
     cursor:pointer;
     background-color:#efb8a8;
@@ -112,6 +111,23 @@
     background-color: #f2ae9b;
     color:white !important;
 }
+
 .expression-img{
     width: 100%;
+    max-width: 600px;
+}
+
+@media (max-width: 600px) {
+    .img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .button {
+        padding: 10px 15px;
+    }
+
+    :root {
+        font-size: 14px;
+    }
 }

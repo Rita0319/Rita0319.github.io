@@ -21,7 +21,7 @@
         <span class="title">選取動物</span>
     </div>
 
-    <div style="display: flex;justify-content:center;gap: 10px;" >
+    <div style="display: flex;justify-content:center;gap: 10px;flex-wrap: wrap;">
       <div id="rabbit" class="card" onclick="clickCard(this)">
         <img src="./images/rabbit.jpg"class="img"/>
         <span class="card-desc">兔星人</span>
@@ -64,9 +64,10 @@
       </div>
     </div>
     
-<div style="display:flex;margin:0px 100px;">
-   <img id="expression"class="expression-img"src=""/>
-</div>
+    <div style="display: flex;flex-wrap: wrap;justify-content: center;gap: 10px;">
+      <img id="expression" class="expression-img" src="" />
+      <img id="expression2" class="expression-img" src="" />
+   </div>
 </body>
 
 </html>
@@ -96,14 +97,15 @@ function clickButton(button){
   showExpression();
 }
 
-function showExpression(){
-   console.log(state);
-   const{animal,emotion}=state;
-   const img = document.getElementById('expression');
-   if(animal =='rabbit'&& emotion =='angry'){
-      img.src = './images/rabbit_angry.jpg';}
-      else if(animal =='rabbit'&& emotion =='angry'){
-         img.src = './images/rabbit_angry.jpg';}
+function showExpression() {
+      const { animal, emotion } = state;
+      const img = document.getElementById('expression');
+      const img2 = document.getElementById('expression2');
+      img.src = '';
+      img2.src = '';
+
+      img.src = `./images/${animal}_${emotion}.jpg`;
+      img2.src = `./images/${animal}_${emotion}_2.jpg`;
 }
 </script>
 
