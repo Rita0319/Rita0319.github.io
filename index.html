@@ -101,11 +101,18 @@ function showExpression() {
       const { animal, emotion } = state;
       const img = document.getElementById('expression');
       const img2 = document.getElementById('expression2');
+      const img3 = document.getElementById('expression3');
+      const img4 = document.getElementById('expression4');
+      
       img.src = '';
       img2.src = '';
+      img3.src = '';
+      img4.src = '';
 
       img.src = `./images/${animal}_${emotion}.jpg`;
       img2.src = `./images/${animal}_${emotion}_2.jpg`;
+      img3.src = `./images/${animal}_${emotion}_2.jpg`;
+      img4.src = `./images/${animal}_${emotion}_2.jpg`;
 }
 </script>
 
