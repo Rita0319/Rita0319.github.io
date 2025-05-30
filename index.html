@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./content/style/index.css" />
 </head>
 
-<body class="background-color">
+<body class="background-color"oncontextmenu="return false" onmousedown="disableRightClick(event)" onselectstart="return false" ondragstart="return false">
+   >
 
    <div class="title-bar">
       <div class="left">
@@ -122,6 +123,8 @@ function showExpression() {
       img2.src = `./images/${animal}_${emotion}_2.jpg`;
       img3.src = `./images/${animal}_${emotion}_3.jpg`;
       img4.src = `./images/${animal}_${emotion}_4.jpg`;
+
+     
 }
 </script>
 
